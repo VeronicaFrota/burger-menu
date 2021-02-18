@@ -38,7 +38,6 @@
 				} else {
 					return false;
 				}
-	
 			} else if (width > mobileWidth) {
 				hambugerActive = false;
 				$('#responsive-icon').remove();
@@ -75,3 +74,10 @@
 		}, 500);
 	});
 	
+	// Fecha o menu hamburguer assim que é clicado
+	$(document).on("click", function(e){
+		e.preventDefault();
+		$('#responsive-icon').toggleClass('active');
+		$('#responsive-menu').toggleClass('active');
+		menu.toggleClass('active');
+  });
