@@ -1,0 +1,160 @@
+body {
+	margin: 0px;
+	padding: 40px 0 400px 0;
+}
+
+#responsive-menu {
+	visibility: hidden;
+	position: absolute;
+	background: black;
+	width: auto;
+	max-width: 280px;
+	padding: 20px;
+	left: 0;
+	top: 50px;
+	text-align: left;
+	opacity: 0;
+	transform: translate(-20px, 0px);
+	box-shadow: 0 2px 1px 0 rgba(0,0,0,.4);
+	z-index: 999;
+}
+
+#responsive-menu.active {
+  visibility: visible;
+	opacity: 1;
+	transform: translate(0px, 0px);
+	transition: .3s ease;
+}
+
+#responsive-menu li {
+	display: block;
+	padding: 0px;
+	margin: 0px;
+	border-top: 2px solid;
+}
+
+#responsive-menu li:last-of-type {
+	border-bottom: 2px solid;
+}
+
+#responsive-menu li a {
+	display: block;
+	float: none;
+	padding: 10px;
+	margin: 0px;
+	border: none;
+	min-width: 140px;
+}
+
+#responsive-menu li a:hover {
+	background: white;
+	color: black;
+}
+
+/* Hamburger */
+#responsive-icon {
+	display: block;
+	float: left;
+	width: 40px;
+	height: 30px;
+	padding: 15px 0 0 10px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+#responsive-icon::before, 
+#responsive-icon::after {
+	content: '';
+	display: block;
+	height: 4px;
+	transition: .3s;
+}
+
+#responsive-icon::before {
+	background: white;
+	margin-bottom: 8px;
+}
+
+#responsive-icon::after {
+	box-shadow: 0 4px 0 0 white, 0 -4px 0 0 white;
+}
+
+#responsive-icon.active::before, 
+#responsive-icon.active::after {
+	width: 80%;
+	background: white;
+	box-shadow: none;
+}
+
+#responsive-icon.active::before {
+	transform: rotate(45deg) translate(7px, 4px);
+}
+
+#responsive-icon.active::after {
+	transform: rotate(-225deg) translate(-4px, 1px);
+}
+/* Final Hamburger */
+
+nav {
+	width: 100%;
+	background: #010101;
+	position: fixed;
+	top: 0;
+	height: 50px;
+	z-index: 100;
+}
+
+/* nav ul {
+	text-align: center;
+} */
+
+nav ul li {
+	display: inline-block;
+}
+
+nav a {
+	padding: 10px 40px;
+	text-decoration: none;
+	color: white;
+	font-size: 1.4em;
+}
+
+nav a:hover {
+	color: #8844ee;
+}
+
+h1, h2, a {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #8844EE;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 100px;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	line-height: 1.4em;
+}
+
+#cliente {
+	width: auto;
+	float: right;
+	padding: 10px;
+	font-size: 1em;
+}
+
+@media only screen and (max-width: 1091px) {
+  nav #cliente a {
+    font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 325px) {
+  nav #cliente a {
+    padding: 5px 0;
+    font-size: 20px;
+	}
+}
