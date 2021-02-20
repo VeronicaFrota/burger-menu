@@ -64,7 +64,7 @@
 		color: "white"
 	});
 	
-	$('nav a').click(function(e){
+	$('.menu-nav a[href^="#"]').click(function(e){
 		e.preventDefault();
 		var id = $(this).attr('href'),
 				menuHeight = $('nav').innerHeight(),
@@ -76,8 +76,6 @@
 	
 	// Fecha o menu hamburguer assim que é clicado
 	$(document).on("click", function(e){
-		e.preventDefault();
 		$('#responsive-icon').toggleClass('active');
 		$('#responsive-menu').toggleClass('active');
-		menu.toggleClass('active');
   });

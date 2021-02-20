@@ -1,6 +1,21 @@
 body {
 	margin: 0px;
 	padding: 40px 0 400px 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, a {
+	color: #8844EE;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 30px;
+}
+
+p {
+	font-size: 1.2em;
+	line-height: 1.4em;
 }
 
 #responsive-menu {
@@ -104,10 +119,6 @@ nav {
 	z-index: 100;
 }
 
-/* nav ul {
-	text-align: center;
-} */
-
 nav ul li {
 	display: inline-block;
 }
@@ -121,22 +132,6 @@ nav a {
 
 nav a:hover {
 	color: #8844ee;
-}
-
-h1, h2, a {
-	font-family: Arial, Helvetica, sans-serif;
-	color: #8844EE;
-}
-
-h1 {
-	text-align: center;
-	margin-top: 100px;
-}
-
-p {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 1.2em;
-	line-height: 1.4em;
 }
 
 #cliente {
@@ -157,4 +152,8 @@ p {
     padding: 5px 0;
     font-size: 20px;
 	}
+}
+
+.section-container {
+	padding: 0 15px;
 }
